@@ -1,0 +1,22 @@
+.me__img {
+	img {
+		display: block;
+		border-radius: 20px;
+		height: 300px;
+	}
+}
+
+.me__main {
+	grid-gap: 0 50px;
+}
+
+.me__text {
+	max-width: 500px;
+	line-height: 150%;
+}
+
+.me__name {
+	margin-bottom: 15px;
+	font-size: 21px;
+	font-weight: 700;
+}

@@ -1,0 +1,47 @@
+.faq__item {
+	position: relative;
+	border-bottom: 1px solid $purple;
+
+	&:first-child {
+		border-top: 1px solid $purple;
+	}
+}
+
+.faq__title {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.faq__header {
+	padding: 20px;
+	width: 100%;
+	position: relative;
+
+	&.active {
+		.faq__close {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.faq__close {
+	width: 40px;
+	height: 40px;
+	pointer-events: none;
+	transform: rotate(45deg);
+
+	transition: .3s ease-in-out;
+}
+
+.faq__text {
+	max-height: 0;
+	overflow: hidden;
+
+	transition: .3s ease-in-out;
+	line-height: 150%;
+	
+	a,
+	button {
+		color: $yellow;
+	}
+}

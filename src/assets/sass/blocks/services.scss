@@ -1,0 +1,212 @@
+.services__main {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 40px;
+
+	@media($media_xl) {
+		grid-gap: 30px 20px;
+	}
+
+	@media($media_lg2) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@media($media_sm) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.services__item {
+	border-radius: 30px;
+	flex-basis: 32%;
+	padding: 40px 30px 30px;
+	font-size: 17px;
+	position: relative;
+	overflow: hidden;
+	transition: transform .3s;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		background: rgba(0, 0, 0, .8);
+	}
+
+	&:hover {
+		transform: scale(1.05);
+	}
+
+	@media($media_xl) {
+		padding: 30px 20px;
+	}
+	
+	@media($media_md) {
+		padding: 20px 15px;
+	}
+}
+
+.services__inner {
+	position: relative;
+	z-index: 3;
+}
+
+.services__title {
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.services__text {
+	margin: 30px 0;
+
+	@media($media_sm) {
+		font-size: 16px;
+		line-height: 130%;
+		margin: 15px 0;
+	}
+}
+
+.services__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 1;
+}
+
+.services__price {
+	margin-bottom: 20px;
+
+	@media($media_sm) {
+		margin-bottom: 15px;
+	}
+}
+
+.services__more {
+	display: block;
+	position: relative;
+	padding-bottom: 5px;
+	margin-left: auto;
+
+	transition: color .2s ease .2s;
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 98%;
+		height: 2px;
+		background: $white2;
+		border-radius: 2px;
+
+		transition: width .3s;
+	}
+
+	&:hover {
+		&:after {
+			width: 20px;
+		}
+
+		color: $yellow2;
+	}
+}
+
+// .services__btn {
+// 	margin: 30px auto 0;
+// 	width: 200px;
+// 	height: 55px;
+// 	background: $white2;
+// 	border-radius: 20px;
+// 	font-weight: 700;
+// 	font-size: 20px;
+// 	color: $black2;
+// 	display: block;
+// }
+
+// hovicon
+.hovicon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 30px auto 0;
+	width: 200px;
+	height: 55px;
+	background: $purple;
+	border-radius: 20px;
+	font-weight: 700;
+	font-size: 20px;
+	color: $black2;
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+	color: $white2;
+
+	&:after {
+		pointer-events: none;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border-radius: 20px;
+		content: '';
+		-webkit-box-sizing: content-box;
+		-moz-box-sizing: content-box;
+		box-sizing: content-box;
+	}
+
+	&:before {
+		speak: none;
+		font-size: 48px;
+		line-height: 90px;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		display: block;
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+/* Effect 3 */
+.hovicon.effect-3 {
+	box-shadow: 0 0 0 4px $white2;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.hovicon.effect-3:after {
+	top: -2px;
+	left: -2px;
+	padding: 2px;
+	z-index: -1;
+	background: $white2;
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.5s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.5s;
+	transition: transform 0.4s, opacity 0.5s;
+}
+
+/* Effect 3a */
+.hovicon.effect-3.sub-a,
+.hovicon.effect-3.sub-a i {
+	color: $black2;
+}
+
+.hovicon.effect-3.sub-a:hover,
+.hovicon.effect-3.sub-a:hover i {
+	color: $white2;
+}
+
+.hovicon.effect-3.sub-a:hover:after {
+	-webkit-transform: scale(1.3);
+	-moz-transform: scale(1.3);
+	-ms-transform: scale(1.3);
+	transform: scale(1.3);
+	opacity: 0;
+}

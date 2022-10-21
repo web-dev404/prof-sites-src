@@ -1,0 +1,295 @@
+.header {
+	background: rgba($black2, .6);
+	padding: 18px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100%;
+}
+
+.link-animation {
+	position: relative;
+
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: -5px;
+		width: 0;
+		height: 2px;
+		background-color: $white2;
+		transition: width 0.5s;
+	}
+
+	&:hover {
+		&:after {
+			content: "";
+			width: 100%;
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: -5px;
+			height: 2px;
+			background-color: #FFB800;
+			transition: width 0.5s;
+		}
+	}
+}
+
+.nav__item {
+	margin-right: 40px;
+	color: #fff;
+	transition: color .2s;
+
+	&--last {
+		margin-right: 55px;
+
+		@media($media_xl) {
+			margin-right: 0;
+		}
+	}
+
+	@media($media_lg) {
+		margin: 0 0 15px;
+
+		&:last-child {
+			margin: 0 0 30px;
+		}
+	}
+}
+
+.header__tel {
+	display: block;
+}
+
+.nav__modal {
+	background: $white;
+	padding: 10px;
+	position: absolute;
+	z-index: 1000;
+	bottom: -20px;
+	left: 0;
+	transform: translateY(100%);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity .3s;
+}
+
+.nav__modal.active {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.nav-modal__link {
+	display: block;
+	margin-bottom: 10px;
+	border-bottom: 1px solid $purple;
+	padding-bottom: 10px;
+	color: $black;
+	white-space: nowrap;
+	text-align: left;
+	position: relative;
+	z-index: 1000;
+	transition: color .2s;
+}
+
+.nav-modal__link:last-child {
+	margin-bottom: 0;
+}
+
+.nav-modal__link:hover {
+	color: $purple;
+}
+
+.nav {
+	font-size: 18px;
+	font-family: 'Source Sans Pro';
+	color: $white;
+
+	transition: transform .5s;
+
+	@media($media_lg) {
+		transform: translateY(-100%);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background: $purple;
+		z-index: 4;
+		flex-direction: column;
+		align-items: flex-start;
+		padding-left: 20px;
+		text-align: left;
+		padding-top: 150px;
+	}
+
+	&.active {
+		transform: translateY(0);
+	}
+}
+
+// select
+.select {
+	position: relative;
+	width: 67px;
+	user-select: none;
+}
+
+.select__arrow {
+	width: 10px;
+	height: 10px;
+	margin-left: 5px;
+	transition: stroke .2s;
+}
+
+.select__header {
+	font-size: 16px;
+	font-family: 'Source Sans Pro';
+	cursor: pointer;
+
+	// &:hover {
+	// 	stroke: #FFB800;
+	// 	color: #FFB800;
+	// }
+}
+
+.select__body {
+	position: absolute;
+	top: calc(100% + 10px);
+	border-radius: 10px;
+	background: $white2;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	pointer-events: none;
+	overflow: hidden;
+
+	transition: opacity .3s, pointer-events .3s;
+
+	&.active {
+		opacity: 1;
+		pointer-events: auto;
+	}
+}
+
+.select__item {
+	cursor: pointer;
+	color: $black2;
+	padding: 10px 20px;
+
+	transition: background .3s, color .3s;
+
+	&:hover {
+		background: $purple;
+		color: $white2;
+	}
+}
+
+.select-item__wood {
+	width: 100%;
+	height: 2px;
+	background: $purple;
+}
+
+.select__flag {
+	width: 28px;
+	height: 20px;
+}
+
+// burger
+.visuallyHidden {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
+
+.hamburger {
+	margin: 0 auto;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	cursor: pointer;
+}
+
+.hamburger .bar {
+	padding: 0;
+	width: 30px;
+	height: 4px;
+	background-color: $white;
+	display: block;
+	border-radius: 4px;
+	transition: all 0.4s ease-in-out;
+	position: absolute;
+}
+
+.bar1 {
+	top: 0;
+}
+
+.bar2,
+.bar3 {
+	top: 13.5px;
+}
+
+.bar3 {
+	right: 0;
+}
+
+.bar4 {
+	bottom: 0;
+}
+
+/* HAMBURGER 1 */
+.checkbox1-label {
+	display: none;
+	margin-left: 20px;
+	position: relative;
+	z-index: 101;
+
+	@media($media_lg2) {
+		display: block;
+	}
+
+	@media($media_xs) {
+		margin-left: 15px;
+	}
+
+	&.active {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		margin-left: 0;
+	}
+}
+
+.checkbox1:checked+label>.hamburger1>.bar1 {
+	transform: rotate(45deg);
+	transform-origin: 5%;
+	width: 41px;
+	background-color: $black;
+}
+
+.checkbox1:checked+label>.hamburger1>.bar2 {
+	transform: translateX(-40px);
+	display: none;
+}
+
+.checkbox1:checked+label>.hamburger1>.bar3 {
+	transform: translateX(40px);
+	display: none;
+}
+
+.checkbox1:checked+label>.hamburger1>.bar4 {
+	transform-origin: 5%;
+	transform: rotate(-45deg);
+	width: 41px;
+	background-color: $black;
+}

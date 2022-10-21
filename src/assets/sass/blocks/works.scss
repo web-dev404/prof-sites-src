@@ -1,0 +1,43 @@
+.works__title {
+	margin: 20px 0;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	color: #1863DC;
+
+	transition: color .3s;
+
+	&:hover {
+		color: $yellow;
+	}
+}
+
+.works__arrow {
+	min-width: 40px;
+	min-height: 40px;
+	max-width: 40px;
+	max-height: 40px;
+}
+
+.works__item {
+	display: block;
+
+	img {
+		display: block;
+		border-radius: 15px;
+	}
+}
+
+.works {
+	padding: 0 100px;
+
+	@media($media_lg2) {
+		padding: 0;
+	}
+}
+
+.works__text {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+}

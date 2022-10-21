@@ -1,0 +1,101 @@
+.modal {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  z-index: 1000;
+  max-width: 0;
+  max-height: 0;
+  padding: 0 15px;
+
+  background: rgba(44, 44, 44, 0.8);
+  backdrop-filter: blur(20px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: display .2s, z-index .2s;
+
+  &.active {
+    max-height: 100%;
+    max-width: 100%;
+    min-height: 100%;
+
+    .modal__main {
+      transform: translateY(0);
+    }
+  }
+}
+
+.modal__main {
+  padding: 20px 40px;
+  max-height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 30px;
+  background: $purple;
+  overflow-y: auto;
+  transform: translateY(-100%);
+  transition: transform .5s;
+  position: relative;
+
+  .title {
+    margin-bottom: 5px;
+    font-size: 30px;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  h3 {
+    font-size: 24px;
+    max-width: 700px;
+    margin-bottom: 35px;
+  }
+
+  .form__input {
+    border-color: #FFB400;
+    color: $white;
+
+    &::placeholder {
+      color: $white;
+    }
+  }
+
+
+  /* полоса прокрутки (скроллбар) */
+  &::-webkit-scrollbar {
+    width: 10px;
+    /* высота для горизонтального скролла */
+    background-color: none;
+  }
+
+  /* ползунок скроллбара */
+  &::-webkit-scrollbar-thumb {
+    background: #FFB400;
+    border-radius: 9em;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: block;
+  z-index: 100;
+}
+
+.modal__svg {
+  width: 44px;
+  height: 44px;
+}
+
+.modal-btn {
+  margin-top: 0;
+  border-radius: 30px;
+  padding: 20px;
+  background: #FFB400;
+  max-width: 380px;
+}

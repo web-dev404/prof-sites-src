@@ -1,0 +1,55 @@
+.sphere {
+	width: 100px;
+	height: 100px;
+	background: rgb(83, 31, 181);
+	background: linear-gradient(45deg, rgba(83, 31, 181, 1) 0%, rgba(15, 134, 222, 1) 100%);
+	border-radius: 13% 87% 13% 87% / 88% 8% 92% 12%;
+}
+
+.form__sphere {
+	animation: formSphereAnimation 5s alternate infinite;
+}
+
+.services__sphere {
+	animation: servicesSphereAnimation 5s alternate infinite;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	width: 200px;
+	height: 200px;
+}
+
+@keyframes formSphereAnimation {
+	0% {
+		border-radius: 48% 52% 70% 30% / 25% 71% 29% 75%;
+		transform: translate3d(0, 50px, 0);
+	}
+
+	50% {
+		border-radius: 23% 77% 34% 66% / 70% 62% 38% 30%;
+		transform: translate3d(50px, 0, 0);
+	}
+
+	100% {
+		border-radius: 80% 20% 46% 54% / 47% 70% 30% 53%;
+		transform: translate3d(-40px, -40px, 0);
+	}
+}
+
+@keyframes servicesSphereAnimation {
+	0% {
+		border-radius: 48% 52% 70% 30% / 25% 71% 29% 75%;
+		transform: translate3d(70px, 0, 0);
+	}
+
+	50% {
+		border-radius: 23% 77% 34% 66% / 70% 62% 38% 30%;
+		transform: translate3d(70px, 120px, 0);
+	}
+
+	100% {
+		border-radius: 80% 20% 46% 54% / 47% 70% 30% 53%;
+		transform: translate3d(70px, 0, 0);
+	}
+}

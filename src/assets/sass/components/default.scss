@@ -1,0 +1,201 @@
+html {
+  overflow-x: hidden;
+
+}
+html,
+body {
+  scrollbar-color: $purple #000;
+  /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-width: thin;
+  /* толщина */
+}
+
+body {
+  position: relative;
+  @include font('Montserrat', 400);
+  color: $white2;
+  font-size: 18px;
+  background-color: $black2;
+  background-image: url('../img/bg.png');
+
+  &.active-body {
+    overflow: hidden;
+  }
+
+  input::placeholder {
+    color: $gray2;
+  }
+
+  /* полоса прокрутки (скроллбар) */
+  &::-webkit-scrollbar {
+    width: 10px;
+    /* высота для горизонтального скролла */
+    background-color: none;
+  }
+
+    @media($media_sm2) {
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+
+  /* ползунок скроллбара */
+  &::-webkit-scrollbar-thumb {
+    background: rgb(83, 31, 181);
+    background: linear-gradient(45deg, rgba(83, 31, 181, 1) 0%, rgba(15, 134, 222, 1) 100%);
+    border-radius: 9em;
+  }
+
+  /* Стрелки */
+
+  &::-webkit-scrollbar-button:vertical:start:decrement {
+    background: linear-gradient(120deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+      linear-gradient(240deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+      linear-gradient(0deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #f6f8f4;
+  }
+
+  &::-webkit-scrollbar-button:vertical:end:increment {
+    background:
+      linear-gradient(300deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+      linear-gradient(60deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+      linear-gradient(180deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #f6f8f4;
+  }
+
+  &::-webkit-scrollbar-button:horizontal:start:decrement {
+    background:
+      linear-gradient(30deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+      linear-gradient(150deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+      linear-gradient(270deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #f6f8f4;
+  }
+
+  &::-webkit-scrollbar-button:horizontal:end:increment {
+    background:
+      linear-gradient(210deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+      linear-gradient(330deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+      linear-gradient(90deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #f6f8f4;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 36px;
+  color: $white2;
+}
+
+a,
+button {
+  color: $white2;
+}
+
+.container {
+  max-width: 1430px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.h1 {
+  font-size: 50px;
+  @include font('Source Sans Pro', 700);
+
+  @media($media_lg) {
+    font-size: 40px;
+  }
+
+  @media($media_sm2) {
+    font-size: 30px;
+  }
+}
+
+h2 {
+  font-weight: 700;
+}
+
+.variation-svg {
+  height: 54px;
+  transform: scale(2.2) !important;
+  margin-left: 28px;
+}
+
+.title {
+  font-size: 40px;
+  @include font('Source Sans Pro', 700);
+  position: relative;
+  padding-left: 52px;
+  margin-bottom: 80px;
+
+  &--stages {
+    margin-bottom: 100px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 32px;
+    height: 4px;
+    background: $purple;
+    border-radius: 3px;
+  }
+
+  @media($media_sm) {
+    font-size: 24px;
+    margin-bottom: 60px;
+  }
+}
+
+.section {
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.swiper-button-prev2,
+.swiper-button-next2 {
+  top: 175px !important;
+  transform: translate(0) !important;
+
+  @media($media_xl) {
+    top: 120px !important;
+  }
+
+  @media($media_md) {
+    top: 100px !important;
+  }
+
+  @media($media_md) {
+    top: 150px !important;
+  }
+
+  @media($media_xs) {
+    top: 120px !important;
+  }
+}
+
+.swiper-button-next2 {
+  right: -50px !important;
+}
+
+.swiper-button-prev2 {
+  left: -50px !important;
+}
+
+.pos-r {
+  position: relative;
+}
+
+.test-img {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  max-width: 180px;
+  display: block;
+}
