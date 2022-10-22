@@ -34,12 +34,36 @@
 
 			<div class="d-f ai-cen jc-end">
 				<nav class="nav d-f ai-cen">
-					<a href="#advantages" class="link-animation header__link nav__item">Преимущества</a>
-					<a href="#services" class="link-animation header__link nav__item">Услуги</a>
-					<a href="#works" class="link-animation header__link nav__item red-btn red-btn--sm">Работы</a>
-					<a href="#contact"
+					<a href="#advantages-block" class="link-animation header__link nav__item">Преимущества</a>
+					<a href="#services-block" class="link-animation header__link nav__item">Услуги</a>
+					<a href="#works-block" class="link-animation header__link nav__item red-btn red-btn--sm">Работы</a>
+					<a href="#contact-block"
 						class="link-animation header__link nav__item nav__item--last red-btn red-btn--sm">Контакты</a>
 					<a href="tel:+998946053999" class="link-animation header__tel mr-30">+998 (94) 605-39-99</a>
+
+					<div class="buttons buttons--header buttons--hidden d-f ai-start flex-direction-column">
+						<button class="blob-btn blob-btn--header modal-trigger-btn">
+							Обратный звонок
+							<span class="blob-btn__inner">
+								<span class="blob-btn__blobs">
+									<span class="blob-btn__blob"></span>
+									<span class="blob-btn__blob"></span>
+									<span class="blob-btn__blob"></span>
+									<span class="blob-btn__blob"></span>
+								</span>
+							</span>
+						</button>
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+							<defs>
+								<filter id="goo">
+									<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+									<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo">
+									</feColorMatrix>
+									<feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+								</filter>
+							</defs>
+						</svg>
+					</div>
 				</nav>
 
 				<div class="d-f ai-cen">

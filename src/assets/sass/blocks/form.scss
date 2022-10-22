@@ -64,6 +64,10 @@
 	@media($media_lg2) {
 		flex-direction: column-reverse;
 	}
+
+	@media($media_sm2) {
+		text-align: center;
+	}
 }
 
 .form-wrapper__img {
@@ -83,6 +87,10 @@
 .form-wrapper__title {
 	@include font('Source Sans Pro', 700);
 	font-size: 40px;
+
+	@media($media_sm2) {
+		font-size: 26px;
+	}
 }
 
 .form__btn {
@@ -107,8 +115,20 @@
 	max-height: 70px;
 
 	&--header {
-		max-width: 180px;
-		max-height: 54px;
+		width: 185px;
+		height: 54px;
+
+		@media($media_sm2) {
+			display: none;
+		}
+	}
+
+	&--hidden {
+		display: none;
+
+		@media($media_sm2) {
+			display: flex;
+		}
 	}
 
 	&--main {
@@ -144,8 +164,8 @@ $borderW: 2px;
 	border-radius: 40px;
 
 	&--header {
-		width: 185px;
-		height: 54px;
+		width: 100%;
+		height: 100%;
 		min-height: 54px;
 		font-size: 16px;
 		font-family: 'Source Sans Pro';

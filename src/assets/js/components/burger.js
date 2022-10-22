@@ -12,5 +12,6 @@ headerLink.forEach(item => {
     item.addEventListener('click', (e) => {
         body.classList.remove('active-body');
         nav.classList.remove('active');
+        checkbox.checked = false;
     })
 })

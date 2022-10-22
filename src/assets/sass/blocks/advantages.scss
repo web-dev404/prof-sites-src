@@ -5,6 +5,18 @@
 	transform: translate(-50%, -50%);
 	width: 65px;
 	height: 75px;
+
+	@media($media_sm) {
+		width: 35px;
+		height: auto;
+	}
+}
+
+.advantages__pentagon {
+	@media($media_sm) {
+		width: 100px;
+		height: 100px;
+	}
 }
 
 .advantages__img {

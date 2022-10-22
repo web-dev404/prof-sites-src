@@ -274,7 +274,6 @@
 	transform: rotate(45deg);
 	transform-origin: 5%;
 	width: 41px;
-	background-color: $black;
 }
 
 .checkbox1:checked+label>.hamburger1>.bar2 {
@@ -291,5 +290,4 @@
 	transform-origin: 5%;
 	transform: rotate(-45deg);
 	width: 41px;
-	background-color: $black;
 }
