@@ -10,6 +10,7 @@ faqBtns.forEach(item => {
 			document.querySelectorAll('.faq__text').forEach((text) => {
 				text.style.maxHeight = null
 				text.style.padding = 0;
+				faqText.style.marginBottom = '0';
 			});
 		} else {
 			faqBtns.forEach(item => {
@@ -18,11 +19,14 @@ faqBtns.forEach(item => {
 			document.querySelectorAll('.faq__text').forEach((text) => {
 				text.style.maxHeight = null
 				text.style.padding = 0;
+				faqText.style.marginBottom = '0';
 			});
 
 			item.classList.add('active');
 			faqText.style.maxHeight = faqText.scrollHeight + 40 + 'px';
 			faqText.style.padding = '20px';
+			faqText.style.paddingBottom = '0';
+			faqText.style.marginBottom = '20px';
 		}
 	});
 });

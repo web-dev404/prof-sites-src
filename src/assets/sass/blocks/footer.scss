@@ -1,8 +1,41 @@
 .footer {
 	background: $black3;
 	padding: 55px 0;
+
+	@media($media_sm2) {
+		padding: 55px 0 30px;
+	}
 }
 
 .rights {
 	font-family: 'Source Sans Pro';
+}
+
+.foooter__links {
+	grid-gap: 15px 25px;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+
+	@media($media_md2) {
+		justify-content: center;
+	}
+
+	@media(max-width: 450px) {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+}
+
+.footer__main {
+	grid-gap: 30px 50px;
+
+	@media($media_md2) {
+		flex-direction: column;
+		justify-content: flex-start;
+
+		.variation-svg {
+			margin: 0;
+		}
+	}
 }

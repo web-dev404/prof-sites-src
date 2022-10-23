@@ -35,6 +35,13 @@
 	transform: rotate(45deg);
 
 	transition: .3s ease-in-out;
+
+	@media($media_sm2) {
+		min-width: 25px;
+		min-height: 25px;
+		max-width: 25px;
+		max-height: 25px;
+	}
 }
 
 .faq__text {

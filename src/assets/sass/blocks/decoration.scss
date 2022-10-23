@@ -1,10 +1,41 @@
 .decoration__img1 {
 	height: 100px;
+
+	@media($media_lg2) {
+		height: 70px;
+	}
+
+	@media($media_sm2) {
+		height: 55px;
+	}
 }
 
 .scene1__el2 {
 	left: -150px !important;
 	top: -70px !important;
+
+	@media($media_md) {
+		top: 20px !important;
+		left: 100px !important;
+	}
+}
+
+.scene1 {
+	@media($media_md) {
+		width: 100%;
+	}
+}
+
+.scene1__el1 {
+	@media($media_md) {
+		top: -250px !important;
+		left: 70% !important;
+	}
+
+	@media($media_sm2) {
+		top: -360px !important;
+		left: 85% !important;
+	}
 }
 
 .scene3__el1 {

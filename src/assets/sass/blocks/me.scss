@@ -3,20 +3,56 @@
 		display: block;
 		border-radius: 20px;
 		height: 300px;
+		object-fit: cover;
+		min-width: 170px;
+
+		@media($media_lg2) {
+			height: 200px;
+		}
+
+			@media($media_sm2) {
+				margin-bottom: 20px;
+			}
 	}
 }
 
 .me__main {
 	grid-gap: 0 50px;
+
+		@media($media_lg3) {
+			grid-gap: 0 20px;
+		}
+
+		@media($media_sm2) {
+			flex-direction: column;
+			text-align: center;
+		}
 }
 
 .me__text {
 	max-width: 500px;
 	line-height: 150%;
+
+	@media($media_lg3) {
+		max-width: 350px;
+	}
 }
 
 .me__name {
 	margin-bottom: 15px;
 	font-size: 21px;
 	font-weight: 700;
+}
+
+.me__wrapper {
+	@media($media_md) {
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+}
+
+.me {
+	@media($media_md) {
+		margin-bottom: 60px;
+	}
 }

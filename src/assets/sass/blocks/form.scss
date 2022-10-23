@@ -133,6 +133,10 @@
 
 	&--main {
 		margin-bottom: 96px;
+
+		@media($media_sm) {
+			margin-bottom: 45px;
+		}
 	}
 }
 
@@ -495,5 +499,12 @@ $borderW: 2px;
 
 	@media($media_lg3) {
 		display: block;
+	}
+}
+
+.contact-block__form {
+	.blob-btn {
+		min-height: 65px;
+
 	}
 }
