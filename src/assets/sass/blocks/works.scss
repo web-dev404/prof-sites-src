@@ -10,6 +10,14 @@
 	&:hover {
 		color: $yellow;
 	}
+
+	@media($media_lg2) {
+		font-size: 16px;
+	}
+
+	@media($media_sm2) {
+		margin: 20px 0 15px;
+	}
 }
 
 .works__arrow {
@@ -40,4 +48,8 @@
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 150%;
+
+	@media($media_lg2) {
+		font-size: 16px;
+	}
 }

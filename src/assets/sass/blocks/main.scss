@@ -34,6 +34,10 @@
 	@media($media_md) {
 		padding-top: 150px;
 	}
+
+	@media($media_sm) {
+		padding-top: 130px;
+	}
 }
 
 .main__subtitle {
@@ -62,7 +66,7 @@
 
 	&--second {
 		display: none;
-		margin: 0 auto 50px;
+		margin: 0 0 50px;
 
 		@media($media_md) {
 			display: block;

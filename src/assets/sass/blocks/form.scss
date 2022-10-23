@@ -77,6 +77,10 @@
 		margin: 0 0 30px;
 		max-width: 300px;
 	}
+
+	@media($media_sm2) {
+		max-width: 200px;
+	}
 }
 
 .form-wrapper__text {
@@ -498,7 +502,7 @@ $borderW: 2px;
 	display: none;
 
 	@media($media_lg3) {
-		display: block;
+		display: flex;
 	}
 }
 

@@ -53,6 +53,7 @@
 
 .me {
 	@media($media_md) {
-		margin-bottom: 60px;
+		margin-bottom: 0;
+		padding-bottom: 60px;
 	}
 }

@@ -48,9 +48,12 @@ const swiper2 = new Swiper('.works-slider', {
     autoHeight: true,
     speed: 500,
     slidesPerView: 1,
-    spaceBetween: 40,
+    spaceBetween: 20,
 
     breakpoints: {
+        800: {
+            spaceBetween: 40
+        },
         600: {
             slidesPerView: 2
         }

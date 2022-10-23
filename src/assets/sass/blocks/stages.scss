@@ -76,6 +76,14 @@
 			}
 		}
 	}
+
+	@media($media_sm2) {
+		font-size: 15px;
+		&:after {
+			width: 35px;
+			height: 35px;
+		}
+	}
 }
 
 .stages__arrow {
@@ -98,6 +106,10 @@
 
 	@media($media_md) {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media($media_sm2) {
+		grid-gap: 50px 20px;
 	}
 }
 
